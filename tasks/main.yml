@@ -1,0 +1,13 @@
+- name: check ant exists
+  stat: path={{ant_name}}
+  register: ant_exists
+
+- name: download and unarchive ant
+  unarchive: 
+    src: "{{ ant_download_url }}"
+    dest: "{{ ant_download_folder }}"
+    remote_src: True
+    owner: root
+    group: root
+  when: not ant_exists.stat.exists
+  become: true

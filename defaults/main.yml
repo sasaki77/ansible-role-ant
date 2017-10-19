@@ -1,0 +1,4 @@
+ant_download_folder: /opt
+ant_download_url: https://www.apache.org/dist/ant/binaries/apache-ant-1.10.1-bin.tar.gz
+ant_name: "{{ant_download_folder}}/apache-ant-1.10.1"
+ant_archive: "{{ant_download_folder}}/apache-ant-1.10.1-bin.tar.gz"
